@@ -27,7 +27,7 @@ export default function ForestBackground() {
           </radialGradient>
         </defs>
 
-        <rect width="1440" height="6000" fill="#0D1018" />
+        <rect width="1440" height="6000" fill="#0C1219" />
 
         <circle cx="1100" cy="180" r="90" fill="url(#moonGlow)" />
 

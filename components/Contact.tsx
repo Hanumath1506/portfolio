@@ -1,64 +1,37 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { fadeInView } from '@/lib/motion';
-
 const links = [
+  { label: 'Email', href: 'mailto:hanumath2304@gmail.com' },
   {
-    label: 'hanumath2304@gmail.com',
-    href: 'mailto:hanumath2304@gmail.com',
-  },
-  {
-    label: 'github.com/Hanumath1506',
-    href: 'https://github.com/Hanumath1506',
-  },
-  {
-    label: 'linkedin.com/in/hanumathchowdary',
+    label: 'LinkedIn',
     href: 'https://linkedin.com/in/hanumathchowdary',
   },
+  { label: 'Github', href: 'https://github.com/Hanumath1506' },
 ];
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="section-pad min-h-[75vh] flex flex-col items-center justify-center text-center divider-t"
+      className="section-container stitch-section relative flex min-h-[614px] flex-col items-center justify-center"
     >
-      <motion.div {...fadeInView} className="max-w-3xl mx-auto w-full">
-        <h2 className="font-serif text-[clamp(2.25rem,5.5vw,4rem)] text-[#E8EDF2] font-light leading-tight tracking-tight">
-          Let&apos;s build something.
-        </h2>
-
-        <div className="mt-20 md:mt-24 flex flex-col gap-5">
-          {links.map((link, i) => (
-            <motion.a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith('http') ? '_blank' : undefined}
-              rel={
-                link.href.startsWith('http')
-                  ? 'noopener noreferrer'
-                  : undefined
-              }
-              initial={{ opacity: 1 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.4,
-                delay: 0.15 + i * 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              className="font-mono text-sm text-[#4A5568] hover:text-[#C8A96E] transition-colors duration-[600ms] tracking-wide"
-            >
-              {link.label}
-            </motion.a>
-          ))}
-        </div>
-
-        <p className="mt-28 font-mono text-[10px] text-[#4A5568]/50 tracking-[0.25em]">
-          © {new Date().getFullYear()} Hanu Mandadi
-        </p>
-      </motion.div>
+      <h2 className="type-display mb-4 text-center text-[#E8EDF2]">
+        Let&apos;s build something.
+      </h2>
+      <p className="type-subtitle mb-16 text-center text-2xl">The next step</p>
+      <div className="flex gap-8 md:gap-16">
+        {links.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target={link.href.startsWith('http') ? '_blank' : undefined}
+            rel={
+              link.href.startsWith('http') ? 'noopener noreferrer' : undefined
+            }
+            className="type-label-md nav-link text-[#E8EDF2] transition-colors duration-500"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
     </section>
   );
 }

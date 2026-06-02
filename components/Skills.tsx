@@ -1,89 +1,49 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { fadeInView } from '@/lib/motion';
+import SectionHeading from '@/components/SectionHeading';
 
 const columns = [
   {
     title: 'Programming',
-    skills: ['Python', 'SQL', 'R'],
+    skills: ['Python', 'SQL', 'R', 'JavaScript'],
   },
   {
     title: 'Data Science',
     skills: [
-      'Data Analysis',
-      'Data Cleaning',
-      'Feature Engineering',
-      'Predictive Modeling',
-      'Data Visualization',
-      'NLP',
-      'Scikit-learn',
       'Pandas',
       'NumPy',
+      'Scikit-learn',
+      'NLP',
+      'Feature Engineering',
+      'Predictive Modeling',
     ],
   },
   {
-    title: 'Tools & Platforms',
-    skills: [
-      'FastAPI',
-      'React',
-      'Firebase',
-      'Qdrant',
-      'Docker',
-      'Git',
-      'Tableau',
-      'Excel',
-      'Streamlit',
-      'Unity',
-      'Blender',
-    ],
+    title: 'Tools',
+    skills: ['React', 'FastAPI', 'Firebase', 'Docker', 'Git', 'Streamlit', 'Unity'],
   },
 ];
 
-function SkillPill({ skill }: { skill: string }) {
-  return (
-    <span className="inline-block font-mono text-[11px] text-[#E8EDF2]/75 border border-[#1E2D3D] px-2.5 py-1 transition-colors duration-[600ms] hover:border-[#4A5568] hover:text-[#E8EDF2]">
-      {skill}
-    </span>
-  );
-}
-
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="section-pad relative overflow-hidden"
-    >
-      <div className="max-w-6xl mx-auto relative z-10">
-        <motion.h2 {...fadeInView} className="chapter-title">
-          Skills
-        </motion.h2>
-        <p className="font-mono text-[10px] text-[#4A5568] mb-20 tracking-[0.15em] -mt-16 md:-mt-20">
-          {`// stack.env`}
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
-          {columns.map((col, colIndex) => (
-            <motion.div
-              key={col.title}
-              initial={{ opacity: 1 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.4,
-                delay: colIndex * 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-            >
-              <h3 className="font-mono text-[10px] text-[#4A5568] tracking-[0.25em] uppercase mb-8">
-                {col.title}
-              </h3>
-              <div className="flex flex-wrap gap-x-2 gap-y-2">
+    <section id="skills" className="section-container stitch-section">
+      <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-12">
+        <div className="md:col-span-4 md:col-start-1">
+          <SectionHeading title="Toolkit" subtitle="The stack" />
+        </div>
+        <div className="grid grid-cols-1 gap-12 pt-4 sm:grid-cols-3 md:col-span-8 md:col-start-5">
+          {columns.map((col) => (
+            <div key={col.title}>
+              <h3 className="type-label mb-8">{`// ${col.title}`}</h3>
+              <div className="flex flex-col gap-4">
                 {col.skills.map((skill) => (
-                  <SkillPill key={skill} skill={skill} />
+                  <span
+                    key={skill}
+                    className="skill-item font-sans text-base cursor-default text-[#E8EDF2]"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

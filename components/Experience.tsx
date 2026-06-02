@@ -61,7 +61,7 @@ export default function Experience() {
                 {item.bullets.map((bullet) => (
                   <li
                     key={bullet.slice(0, 48)}
-                    className="text-sm text-[#4A5568] leading-relaxed max-w-lg font-light"
+                    className="text-sm text-[#C0C8CD] leading-relaxed max-w-lg font-light"
                   >
                     {bullet}
                   </li>
