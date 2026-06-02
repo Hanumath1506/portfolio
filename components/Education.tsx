@@ -50,15 +50,15 @@ export default function Education() {
             >
               <span className="timeline-node" aria-hidden="true" />
 
-              <p className="font-mono text-[10px] text-muted tracking-[0.15em] mb-3">
+              <p className="font-mono text-[10px] text-[#4A5568] tracking-[0.15em] mb-3">
                 {school.date}
               </p>
-              <h3 className="font-serif text-2xl md:text-3xl text-light font-light">
+              <h3 className="font-serif text-2xl md:text-3xl text-[#E8EDF2] font-light">
                 {school.name}
               </h3>
-              <p className="text-sm text-muted mt-2 font-light">{school.degree}</p>
+              <p className="text-sm text-[#4A5568] mt-2 font-light">{school.degree}</p>
               {school.note && (
-                <p className="mt-2 font-mono text-[10px] text-terminal/80">
+                <p className="mt-2 font-mono text-[10px] text-[#4A9B7F]/80">
                   {school.note}
                 </p>
               )}

@@ -62,16 +62,16 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="block"
                       >
-                        <h3 className="font-serif text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.92] text-light font-light tracking-tight transition-colors duration-slow group-hover:text-moon break-words">
+                        <h3 className="font-serif text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.92] text-[#E8EDF2] font-light tracking-tight transition-colors duration-[600ms] group-hover:text-[#C8A96E] break-words">
                           {project.title}
                         </h3>
                       </a>
                     ) : (
-                      <h3 className="font-serif text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.92] text-light font-light tracking-tight transition-colors duration-slow group-hover:text-moon break-words">
+                      <h3 className="font-serif text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.92] text-[#E8EDF2] font-light tracking-tight transition-colors duration-[600ms] group-hover:text-[#C8A96E] break-words">
                         {project.title}
                       </h3>
                     )}
-                    <p className="mt-3 font-mono text-[10px] text-muted tracking-wide">
+                    <p className="mt-3 font-mono text-[10px] text-[#4A5568] tracking-wide">
                       {project.subtitle}
                     </p>
                     {project.href && (
@@ -79,19 +79,19 @@ export default function Projects() {
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-2 inline-block font-mono text-[10px] text-terminal/80 hover:text-terminal transition-colors duration-slow"
+                        className="mt-2 inline-block font-mono text-[10px] text-[#4A9B7F]/80 hover:text-[#4A9B7F] transition-colors duration-[600ms]"
                       >
                         {project.href.replace(/^https:\/\//, '')}
                       </a>
                     )}
                   </div>
 
-                  <p className="font-mono text-[10px] md:text-xs text-terminal lg:text-right lg:max-w-[13rem] lg:pt-2 tracking-wide shrink-0">
+                  <p className="font-mono text-[10px] md:text-xs text-[#4A9B7F] lg:text-right lg:max-w-[13rem] lg:pt-2 tracking-wide shrink-0">
                     {project.tags}
                   </p>
                 </div>
 
-                <p className="text-sm text-muted max-w-2xl leading-relaxed font-light">
+                <p className="text-sm text-[#4A5568] max-w-2xl leading-relaxed font-light">
                   {project.description}
                 </p>
               </div>

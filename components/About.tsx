@@ -17,7 +17,7 @@ export default function About() {
         <h2 className="chapter-title">About</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32">
-          <p className="text-lg md:text-xl text-light/85 leading-[1.75] font-light max-w-xl">
+          <p className="text-lg md:text-xl text-[#E8EDF2]/85 leading-[1.75] font-light max-w-xl">
             Undergraduate at Rutgers double-majoring in Data Science and Computer
             Science. I build and deploy full-stack ML systems—from RAG research
             assistants and cricket analytics platforms to NLP pipelines and VR
@@ -38,10 +38,10 @@ export default function About() {
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
               >
-                <span className="font-mono text-[10px] text-muted tracking-[0.2em] uppercase block mb-2">
+                <span className="font-mono text-[10px] text-[#4A5568] tracking-[0.2em] uppercase block mb-2">
                   {stat.label}
                 </span>
-                <span className="font-serif text-2xl md:text-3xl text-light">
+                <span className="font-serif text-2xl md:text-3xl text-[#E8EDF2]">
                   {stat.value}
                 </span>
               </motion.div>

@@ -53,10 +53,10 @@ export default function Awards() {
               }}
               className="divider-b py-8 first:pt-0 last:border-b-0"
             >
-              <h3 className="font-serif text-lg md:text-xl text-light font-light">
+              <h3 className="font-serif text-lg md:text-xl text-[#E8EDF2] font-light">
                 {award.title}
               </h3>
-              <p className="font-mono text-[10px] text-muted mt-2 tracking-wide">
+              <p className="font-mono text-[10px] text-[#4A5568] mt-2 tracking-wide">
                 {award.org}
               </p>
             </motion.li>

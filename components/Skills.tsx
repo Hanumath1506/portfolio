@@ -42,7 +42,7 @@ const columns = [
 
 function SkillPill({ skill }: { skill: string }) {
   return (
-    <span className="inline-block font-mono text-[11px] text-light/75 border border-line px-2.5 py-1 transition-colors duration-slow hover:border-muted hover:text-light">
+    <span className="inline-block font-mono text-[11px] text-[#E8EDF2]/75 border border-[#1E2D3D] px-2.5 py-1 transition-colors duration-[600ms] hover:border-[#4A5568] hover:text-[#E8EDF2]">
       {skill}
     </span>
   );
@@ -58,7 +58,7 @@ export default function Skills() {
         <motion.h2 {...fadeInView} className="chapter-title">
           Skills
         </motion.h2>
-        <p className="font-mono text-[10px] text-muted mb-20 tracking-[0.15em] -mt-16 md:-mt-20">
+        <p className="font-mono text-[10px] text-[#4A5568] mb-20 tracking-[0.15em] -mt-16 md:-mt-20">
           {`// stack.env`}
         </p>
 
@@ -75,7 +75,7 @@ export default function Skills() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <h3 className="font-mono text-[10px] text-muted tracking-[0.25em] uppercase mb-8">
+              <h3 className="font-mono text-[10px] text-[#4A5568] tracking-[0.25em] uppercase mb-8">
                 {col.title}
               </h3>
               <div className="flex flex-wrap gap-x-2 gap-y-2">

@@ -32,13 +32,13 @@ export default function Publications() {
               ease: [0.25, 0.1, 0.25, 1],
             }}
           >
-            <p className="font-mono text-[10px] text-muted tracking-[0.15em] mb-4">
+            <p className="font-mono text-[10px] text-[#4A5568] tracking-[0.15em] mb-4">
               {pub.date}
             </p>
-            <h3 className="font-serif text-xl md:text-2xl text-light font-light leading-snug">
+            <h3 className="font-serif text-xl md:text-2xl text-[#E8EDF2] font-light leading-snug">
               {pub.title}
             </h3>
-            <p className="mt-4 font-mono text-xs text-muted">{pub.venue}</p>
+            <p className="mt-4 font-mono text-xs text-[#4A5568]">{pub.venue}</p>
           </motion.article>
         ))}
       </div>

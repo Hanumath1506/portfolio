@@ -50,18 +50,18 @@ export default function Experience() {
             >
               <span className="timeline-node" aria-hidden="true" />
 
-              <p className="font-mono text-[10px] text-muted tracking-[0.15em] mb-3">
+              <p className="font-mono text-[10px] text-[#4A5568] tracking-[0.15em] mb-3">
                 {item.dates}
               </p>
-              <h3 className="font-serif text-2xl md:text-3xl text-light font-light">
+              <h3 className="font-serif text-2xl md:text-3xl text-[#E8EDF2] font-light">
                 {item.role}
               </h3>
-              <p className="font-mono text-xs text-muted mt-2">{item.org}</p>
+              <p className="font-mono text-xs text-[#4A5568] mt-2">{item.org}</p>
               <ul className="mt-5 space-y-3 list-none">
                 {item.bullets.map((bullet) => (
                   <li
                     key={bullet.slice(0, 48)}
-                    className="text-sm text-muted leading-relaxed max-w-lg font-light"
+                    className="text-sm text-[#4A5568] leading-relaxed max-w-lg font-light"
                   >
                     {bullet}
                   </li>

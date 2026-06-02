@@ -18,7 +18,7 @@ export default function Nav() {
     >
       <a
         href="#"
-        className="font-serif text-sm md:text-base text-light/90 tracking-wide hover:text-moon transition-colors duration-slow"
+        className="font-serif text-sm md:text-base text-[#E8EDF2]/90 tracking-wide hover:text-[#C8A96E] transition-colors duration-[600ms]"
       >
         Hanu Mandadi
       </a>
@@ -27,7 +27,7 @@ export default function Nav() {
           <a
             key={link.href}
             href={link.href}
-            className="font-mono text-[10px] tracking-[0.2em] text-muted uppercase hover:text-moon transition-colors duration-slow"
+            className="font-mono text-[10px] tracking-[0.2em] text-[#4A5568] uppercase hover:text-[#C8A96E] transition-colors duration-[600ms]"
           >
             {link.label}
           </a>

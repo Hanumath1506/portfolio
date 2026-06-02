@@ -111,7 +111,7 @@
   }
 
   .chapter-title {
-    @apply font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-light font-light tracking-tight mb-20 md:mb-28;
+    @apply font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-[#E8EDF2] font-light tracking-tight mb-20 md:mb-28;
   }
 
   .section-pad {

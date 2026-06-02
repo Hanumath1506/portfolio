@@ -25,7 +25,7 @@ export default function Contact() {
       className="section-pad min-h-[75vh] flex flex-col items-center justify-center text-center divider-t"
     >
       <motion.div {...fadeInView} className="max-w-3xl mx-auto w-full">
-        <h2 className="font-serif text-[clamp(2.25rem,5.5vw,4rem)] text-light font-light leading-tight tracking-tight">
+        <h2 className="font-serif text-[clamp(2.25rem,5.5vw,4rem)] text-[#E8EDF2] font-light leading-tight tracking-tight">
           Let&apos;s build something.
         </h2>
 
@@ -48,14 +48,14 @@ export default function Contact() {
                 delay: 0.15 + i * 0.1,
                 ease: [0.25, 0.1, 0.25, 1],
               }}
-              className="font-mono text-sm text-muted hover:text-moon transition-colors duration-slow tracking-wide"
+              className="font-mono text-sm text-[#4A5568] hover:text-[#C8A96E] transition-colors duration-[600ms] tracking-wide"
             >
               {link.label}
             </motion.a>
           ))}
         </div>
 
-        <p className="mt-28 font-mono text-[10px] text-muted/50 tracking-[0.25em]">
+        <p className="mt-28 font-mono text-[10px] text-[#4A5568]/50 tracking-[0.25em]">
           © {new Date().getFullYear()} Hanu Mandadi
         </p>
       </motion.div>
