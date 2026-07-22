@@ -5,6 +5,16 @@ import { fadeInView } from '@/lib/motion';
 
 const items = [
   {
+    role: 'NEMO Lab Automation Developer',
+    org: 'Princeton Micro-Nano Fabrication Center — Princeton, NJ',
+    dates: 'Jun 2026 – Present',
+    bullets: [
+      'Built a NEMO-CE Django plugin and Flask file-server daemon that replaced USB workflows with automatic SMB network-drive mapping on tool login/logout, using HMAC-signed API communication and SQLite session persistence.',
+      'Integrated Nextcloud with token-based SSO auto-login from NEMO, auto-provisioning per-user and per-group file storage using Linux bind mounts, Samba/SMB, and an Nginx reverse proxy.',
+      'Developed a Windows Tool-PC agent (Flask) that maps/unmaps network drives on login/logout across Windows 7/10/11, and wrote a backfill script provisioning 376 existing MNFC users from NEMO API exports.',
+    ],
+  },
+  {
     role: 'Co-Lead R&D Developer',
     org: 'Princeton Materials Institute — Princeton, NJ',
     dates: 'Dec 2024 – Mar 2026',

@@ -10,6 +10,11 @@ export default function Hero() {
             data science · full-stack · ml · nlp
           </p>
         </div>
+        <div className="hero-reveal hero-reveal-delay mt-4">
+          <p className="type-label-md tracking-[0.15em] text-[#4A5568]">
+            open to ML engineering & data science roles
+          </p>
+        </div>
       </div>
     </section>
   );

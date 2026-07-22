@@ -2,12 +2,16 @@ import SectionHeading from '@/components/SectionHeading';
 
 const awards = [
   {
+    title: 'Honorable Mention, Best Poster',
+    org: 'NJBDA Symposium, Rowan University (2026)',
+  },
+  {
     title: 'Professor Betty Wallace Cornelius Mathematics Excellence Award',
     org: 'Mercer County Community College',
   },
   {
     title: "Dean's List",
-    org: 'Rutgers University',
+    org: 'Rutgers University (Spring 2026)',
   },
   {
     title: 'Highest Honors in Computer Science & Mathematics',

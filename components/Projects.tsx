@@ -19,10 +19,10 @@ const projects = [
   },
   {
     year: '2025',
-    title: 'AI News Headline Analysis',
+    title: 'Agentic Minds — AI News Headline Analysis',
     href: null,
     description:
-      'NLP pipeline on thousands of headlines—embeddings, clustering, and sentiment analysis. VADER sentiment, TF-IDF keyword extraction, and Qwen2.5-7B-Instruct for interpretable cluster labels (RAISE 2026 finalist).',
+      'Led an 8-stage NLP pipeline analyzing ~10,500 AI news headlines to study how coverage frames human agency across healthcare, business, and education—embeddings, clustering, sentiment, and zero-shot classification. National finalist (8 of 188 teams) at RAISE 2026; presented at the NJBDA Symposium at Rowan University, earning an Honorable Mention for Best Poster.',
     tags: ['Data Science', 'Scikit-Learn', 'NLP'],
   },
 ];
