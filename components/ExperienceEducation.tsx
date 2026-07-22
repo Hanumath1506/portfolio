@@ -1,5 +1,12 @@
 const experience = [
   {
+    dates: 'Jun 2026 – Present',
+    role: 'NEMO Lab Automation Developer',
+    org: 'Princeton Micro-Nano Fabrication Center',
+    description:
+      'Built a NEMO-CE Django plugin and Flask file-server daemon that replaced USB workflows with automatic SMB network-drive mapping on tool login/logout, using HMAC-signed API communication and SQLite session persistence. Integrated Nextcloud with token-based SSO auto-login and provisioned 376 existing MNFC users via a backfill script.',
+  },
+  {
     dates: 'Dec 2024 – Mar 2026',
     role: 'Co-Lead R&D Developer',
     org: 'Princeton Materials Institute',
