@@ -25,8 +25,8 @@ export default function About() {
               <div className="font-sans text-base text-[#E8EDF2]">Rutgers &apos;27</div>
             </div>
             <div>
-              <div className="type-label mb-3">Academics</div>
-              <div className="font-sans text-base text-[#E8EDF2]">Dean&apos;s List</div>
+              <div className="type-label mb-3">Major</div>
+              <div className="font-sans text-base text-[#E8EDF2]">Data Science & CS</div>
             </div>
           </div>
         </div>

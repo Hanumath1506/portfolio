@@ -1,0 +1,128 @@
+diff --git a/app/globals.css b/app/globals.css
+index afb98e4..c10f392 100644
+--- a/app/globals.css
++++ b/app/globals.css
+@@ -90,6 +90,12 @@
+     transform: translate(var(--px), var(--py)) scaleX(-1);
+   }
+ 
++  @media (max-width: 767px) {
++    .parallax-layer {
++      display: none;
++    }
++  }
++
+   .nav-link {
+     transition: color 500ms ease-in-out;
+   }
+diff --git a/components/About.tsx b/components/About.tsx
+index d92df0a..aff7008 100644
+--- a/components/About.tsx
++++ b/components/About.tsx
+@@ -25,8 +25,8 @@ export default function About() {
+               <div className="font-sans text-base text-[#E8EDF2]">Rutgers &apos;27</div>
+             </div>
+             <div>
+-              <div className="type-label mb-3">Academics</div>
+-              <div className="font-sans text-base text-[#E8EDF2]">Dean&apos;s List</div>
++              <div className="type-label mb-3">Major</div>
++              <div className="font-sans text-base text-[#E8EDF2]">Data Science & CS</div>
+             </div>
+           </div>
+         </div>
+diff --git a/components/Nav.tsx b/components/Nav.tsx
+index bd5ac95..339a47c 100644
+--- a/components/Nav.tsx
++++ b/components/Nav.tsx
+@@ -1,3 +1,7 @@
++'use client';
++
++import { useState } from 'react';
++
+ const links = [
+   { href: '#about', label: 'About' },
+   { href: '#projects', label: 'Projects' },
+@@ -6,25 +10,66 @@ const links = [
+ ];
+ 
+ export default function Nav() {
++  const [open, setOpen] = useState(false);
++
+   return (
+-    <nav className="sticky top-0 z-50 mx-auto flex w-full max-w-[1100px] items-center justify-between bg-transparent px-6 py-8 md:px-8">
+-      <a
+-        href="#"
+-        className="type-nav-brand text-[#E8EDF2] nav-link transition-colors duration-500"
+-      >
+-        Hanu Mandadi
+-      </a>
+-      <div className="hidden gap-8 md:flex">
+-        {links.map((link) => (
+-          <a
+-            key={link.href}
+-            href={link.href}
+-            className="type-nav text-[#E8EDF2] nav-link"
+-          >
+-            {link.label}
+-          </a>
+-        ))}
++    <nav className="sticky top-0 z-50 mx-auto w-full max-w-[1100px] bg-transparent px-6 py-8 md:px-8">
++      <div className="flex items-center justify-between">
++        <a
++          href="#"
++          className="type-nav-brand text-[#E8EDF2] nav-link transition-colors duration-500"
++        >
++          Hanu Mandadi
++        </a>
++        <div className="hidden gap-8 md:flex">
++          {links.map((link) => (
++            <a
++              key={link.href}
++              href={link.href}
++              className="type-nav text-[#E8EDF2] nav-link"
++            >
++              {link.label}
++            </a>
++          ))}
++        </div>
++        <button
++          type="button"
++          aria-label={open ? 'Close menu' : 'Open menu'}
++          aria-expanded={open}
++          onClick={() => setOpen((v) => !v)}
++          className="flex h-8 w-8 flex-col items-center justify-center gap-[5px] md:hidden"
++        >
++          <span
++            className={`block h-[1.5px] w-6 bg-[#E8EDF2] transition-transform duration-300 ${
++              open ? 'translate-y-[6.5px] rotate-45' : ''
++            }`}
++          />
++          <span
++            className={`block h-[1.5px] w-6 bg-[#E8EDF2] transition-opacity duration-300 ${
++              open ? 'opacity-0' : 'opacity-100'
++            }`}
++          />
++          <span
++            className={`block h-[1.5px] w-6 bg-[#E8EDF2] transition-transform duration-300 ${
++              open ? '-translate-y-[6.5px] -rotate-45' : ''
++            }`}
++          />
++        </button>
+       </div>
++      {open && (
++        <div className="mt-6 flex flex-col gap-6 border-t border-[#1e2429] pt-6 md:hidden">
++          {links.map((link) => (
++            <a
++              key={link.href}
++              href={link.href}
++              onClick={() => setOpen(false)}
++              className="type-nav text-[#E8EDF2] nav-link"
++            >
++              {link.label}
++            </a>
++          ))}
++        </div>
++      )}
+     </nav>
+   );
+ }

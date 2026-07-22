@@ -90,6 +90,12 @@
     transform: translate(var(--px), var(--py)) scaleX(-1);
   }
 
+  @media (max-width: 767px) {
+    .parallax-layer {
+      display: none;
+    }
+  }
+
   .nav-link {
     transition: color 500ms ease-in-out;
   }
