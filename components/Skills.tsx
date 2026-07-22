@@ -33,12 +33,9 @@ export default function Skills() {
           {columns.map((col) => (
             <div key={col.title}>
               <h3 className="type-label mb-8">{`// ${col.title}`}</h3>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-wrap gap-3">
                 {col.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="skill-item font-sans text-base cursor-default text-[#E8EDF2]"
-                  >
+                  <span key={skill} className="skill-item type-label-md">
                     {skill}
                   </span>
                 ))}

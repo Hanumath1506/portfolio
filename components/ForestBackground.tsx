@@ -3,12 +3,12 @@ export default function ForestBackground() {
     <div
       className="forest-background"
       style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
+        position: 'fixed',
+        inset: 0,
         width: '100%',
         height: '100%',
-        zIndex: 0,
+        zIndex: -1,
+        opacity: 0.6,
         pointerEvents: 'none',
       }}
       aria-hidden="true"
